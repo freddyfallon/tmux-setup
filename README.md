@@ -64,6 +64,9 @@ bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel "reattach-to-user-namesp
 unbind -T copy-mode-vi Enter
 bind-key -T copy-mode-vi Enter send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
 ```
+Once you've done this, you'll need to run `C-b source-file ~/.tmux.conf` once.
+
+You'll also want to add the following to a new file called `/usr/local/bin/tat`, and to run `chmod 755 /usr/local/bin/tat` afterwards to change permissions.
 
 ```
 #!/bin/sh
